@@ -52,8 +52,28 @@ void handleScriptJS(AsyncWebServerRequest *request)
 
 void handleLog(AsyncWebServerRequest *request)
 {
+  File file = SD.open("/log.txt"); // Replace with your file path
+  if (file)
+  {
+    request->send(SD, "/log.txt", "text/plain");
+    file.close();
+  }
+  else
+  {
+    Serial.println("ERROR loading log file!!!");
+    request->send(404, "text/plain", "File not found");
+  }
+}
 
+void handleFetch(AsyncWebServerRequest *request)
+{
+  DynamicJsonDocument jsonDoc(256);
+  jsonDoc["voltage1"] = 23;
+  jsonDoc["temperature1"] = 1;
 
+  String response;
+  serializeJson(jsonDoc, response);
+  request->send(200, "application/json", response);
 }
 
 void setupWebServer(const char *ssid, const char *password)
@@ -75,7 +95,6 @@ void setupWebServer(const char *ssid, const char *password)
   }
   Serial.println("SPIFFS initialisiert");
 
-  
   server.on("/", HTTP_GET, handleRoot);
   server.on("/css/bootstrap.min.css", HTTP_GET, handleBootstrap);
   server.on("/js/jquery-3.2.1.slim.min.js", HTTP_GET, handleScriptJS);
@@ -83,6 +102,7 @@ void setupWebServer(const char *ssid, const char *password)
   server.on("/js/bootstrap.min.js", HTTP_GET, handleScriptJS);
   server.on("/js/script.js", HTTP_GET, handleScriptJS);
   server.on("/log", HTTP_GET, handleLog);
+  server.on("/api/measured-values", HTTP_GET, handleFetch);
 
   // Fange 404-Fehler ab
   server.onNotFound(notFound);
