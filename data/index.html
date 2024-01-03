@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Battery Management System</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand mx-auto" href="./about-us.html">BMS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="./index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./about-us.html">About us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/log" target="_blank">Log</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container mt-4">
+    <!-- Zellspannung, Temperatur und Status Tabellen -->
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Zelle</th>
+            <th scope="col">Spannung (V)</th>
+            <th scope="col">Temperatur (°C)</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody id="batteryDataTableBody">
+          <!-- Hier werden die Zellspannung, Temperatur und Statuswerte eingefügt -->
+          <tr id="cell1">
+            <th scope="row">1</th>
+            <td id="voltage1">...</td>
+            <td id="temperature1">...</td>
+            <td id="status1">...</td>
+          </tr>
+          <tr id="cell2">
+            <th scope="row">2</th>
+            <td id="voltage2">...</td>
+            <td id="temperature2">...</td>
+            <td id="status2">...</td>
+          </tr>
+          <tr id="cell3">
+            <th scope="row">3</th>
+            <td id="voltage3">...</td>
+            <td id="temperature3">...</td>
+            <td id="status3">...</td>
+          </tr>
+          <tr id="cell4">
+            <th scope="row">4</th>
+            <td id="voltage4">...</td>
+            <td id="temperature4">...</td>
+            <td id="status4">...</td>
+          </tr>
+          <tr id="cell5">
+            <th scope="row">5</th>
+            <td id="voltage5">...</td>
+            <td id="temperature5">...</td>
+            <td id="status5">...</td>
+          </tr>
+          <tr id="cell6">
+            <th scope="row">6</th>
+            <td id="voltage6">...</td>
+            <td id="temperature6">...</td>
+            <td id="status6">...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Bootstrap JavaScript (optional) -->
+  <script src="js/jquery-3.2.1.slim.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+
+</html>
