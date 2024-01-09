@@ -3,7 +3,7 @@
 
 
 void setup() {
-  setupWebServer("ESP32APES","ThomasFink123");
+  setupWebServer("BMS","ThomasFink123");
   
 }
 

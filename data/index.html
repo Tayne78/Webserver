@@ -7,13 +7,63 @@
   <title>Battery Management System</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!-- Custom Styles -->
+  <style>
+    body {
+      background-color: #f8f9fa;
+      color: #495057;
+    }
+
+    .navbar {
+      background-color: #343a40;
+    }
+
+    .navbar-brand {
+      color: #ffffff !important;
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .navbar-logo img {
+      max-height: 35px; /* Adjust the height as needed */
+    }
+
+    .table {
+      background-color: #ffffff;
+      border-radius: 10px;
+    }
+
+    th,
+    td {
+      text-align: center;
+    }
+
+    th {
+      background-color: #343a40;
+      color: #ffffff;
+    }
+
+    tbody tr:nth-child(odd) {
+      background-color: #f8f9fa;
+      /* Lighter color for odd rows */
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #e9ecef;
+      /* Slightly darker color for even rows */
+    }
+  </style>
 </head>
 
 <body>
 
   <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand mx-auto" href="./about-us.html">BMS</a>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">
+      BMS
+    </a>
+  
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -94,5 +144,7 @@
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/script.js"></script>
+
+</body>
 
 </html>

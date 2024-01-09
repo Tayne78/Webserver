@@ -68,8 +68,14 @@ void handleLog(AsyncWebServerRequest *request)
 void handleFetch(AsyncWebServerRequest *request)
 {
   DynamicJsonDocument jsonDoc(256);
-  jsonDoc["voltage1"] = 23;
-  jsonDoc["temperature1"] = 1;
+  
+  jsonDoc["NUMBER_OF_SLAVES"] = NUMBER_OF_SLAVES;
+
+  for (int i = 0; i < NUMBER_OF_SLAVES; i++)
+  {
+    jsonDoc["voltage" + std::to_string(i+1)] = voltage[i];
+    jsonDoc["temperature" + std::to_string(i+1)] = voltage[i];
+  }
 
   String response;
   serializeJson(jsonDoc, response);
