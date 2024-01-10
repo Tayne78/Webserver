@@ -7,27 +7,37 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <style>
+    
     body {
-      background-color: #f8f9fa; /* Light gray background color */
-      color: #495057; /* Text color */
+      background-color: #f8f9fa;
+      color: #495057;
     }
 
-    /* Optional: Add additional styling for links */
-    a {
-      color: #ff1e00; /* Link color */
+    .navbar {
+      background-color: #343a40;
     }
 
-    a:hover {
-      color: #0056b3; /* Hover color */
+    .navbar-brand {
+      color: #ffffff !important;
+      font-weight: bold;
+      font-size: 24px;
     }
+
+    
+
+  </style>
   </style>
 </head>
 <body>
 
 <!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand mx-auto" href="#">BMS</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <a class="navbar-brand" href="#">
+    BMS
+  </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
@@ -40,7 +50,7 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/log" target="_blank">Log</a>
-      </li> 
+      </li>
     </ul>
   </div>
 </nav>

@@ -3,7 +3,7 @@
 
 
 void setup() {
-  setupWebServer("BMS","ThomasFink123");
+  setupWebServer("BMS","Thomas123");
   
 }
 
