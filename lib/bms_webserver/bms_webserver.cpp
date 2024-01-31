@@ -74,7 +74,7 @@ void handleFetch(AsyncWebServerRequest *request)
   for (int i = 0; i < NUMBER_OF_SLAVES; i++)
   {
     jsonDoc["voltage" + std::to_string(i+1)] = voltage[i];
-    jsonDoc["temperature" + std::to_string(i+1)] = voltage[i];
+    jsonDoc["temperature" + std::to_string(i+1)] = temperature[i];
   }
 
   String response;

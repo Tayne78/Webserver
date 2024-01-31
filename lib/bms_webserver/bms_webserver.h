@@ -13,7 +13,8 @@
 
 extern AsyncWebServer server;
 
-int temperature[NUMBER_OF_SLAVES] = {67,76,54,45}, voltage[NUMBER_OF_SLAVES] = {6,7,5,4};
+static int temperature[NUMBER_OF_SLAVES] = {67,76,54,45};
+static int voltage[NUMBER_OF_SLAVES] = {6,7,5,4};
 
 void notFound(AsyncWebServerRequest *request);
 void handleRoot(AsyncWebServerRequest *request);
