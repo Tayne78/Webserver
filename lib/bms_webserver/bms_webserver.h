@@ -1,7 +1,7 @@
 #ifndef BMS_WEBSERVER_H
 #define BMS_WEBSERVER_H
 
-#define NUMBER_OF_SLAVES 4
+#define NUMBER_OF_SLAVES 6
 
 #include <ESPAsyncWebServer.h>
 #include <WiFi.h>
@@ -13,8 +13,8 @@
 
 extern AsyncWebServer server;
 
-static int temperature[NUMBER_OF_SLAVES] = {67,76,54,45};
-static int voltage[NUMBER_OF_SLAVES] = {6,7,5,4};
+static int temperature[NUMBER_OF_SLAVES] = {67,76,54,45,182,12};
+static float voltage[NUMBER_OF_SLAVES] = {6.1,7.2,5.3,4.4,3.1,2.2};
 
 void notFound(AsyncWebServerRequest *request);
 void handleRoot(AsyncWebServerRequest *request);

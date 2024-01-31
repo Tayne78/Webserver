@@ -40,12 +40,11 @@ const renderTable = (number_of_slaves) => {
 
 const updateTable = data => {
   for (let i = 1; i <= data.NUMBER_OF_SLAVES; i++) {
-    $("#voltage" + i).text(data["voltage" + i]);
+    $("#voltage" + i).text(data["voltage" + i].toFixed(2));
     $("#temperature" + i).text(data["temperature" + i]);
-
   }
-  $("#voltage1").text(data.voltage1.toFixed(2));
-  $("#temperature1").text(data.temperature1.toFixed(2));
+  
+
   // setColorBasedOnValue(data.voltage1, "voltage1");
   // setColorBasedOnValue(data.temperature1, "temperature1");
 }
