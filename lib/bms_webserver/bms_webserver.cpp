@@ -21,6 +21,20 @@ void handleRoot(AsyncWebServerRequest *request)
   }
 }
 
+void handleAboutUs(AsyncWebServerRequest *request)
+{
+  File file = SPIFFS.open("/about-us.html");
+  if (file)
+  {
+    request->send(SPIFFS, "/about-us.html", "text/html");
+    file.close();
+  }
+  else
+  {
+    notFound(request);
+  }
+}
+
 void handleBootstrap(AsyncWebServerRequest *request)
 {
   File file = SPIFFS.open("/css/bootstrap.min.css");
@@ -102,6 +116,7 @@ void setupWebServer(const char *ssid, const char *password)
   Serial.println("SPIFFS initialisiert");
 
   server.on("/", HTTP_GET, handleRoot);
+  server.on("/about-us.html", HTTP_GET, handleAboutUs);
   server.on("/css/bootstrap.min.css", HTTP_GET, handleBootstrap);
   server.on("/js/jquery-3.2.1.slim.min.js", HTTP_GET, handleScriptJS);
   server.on("/js/popper.min.js", HTTP_GET, handleScriptJS);
